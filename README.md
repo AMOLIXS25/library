@@ -6,7 +6,7 @@ Welcome to **BookNest**, a simple yet elegant web app to manage your personal li
 
 ## 🔗 Live Preview
 
-👉 https://amolixs25.github.io/admin-dashboard/
+👉 https://amolixs25.github.io/library/
 
 ## 🌟 Features
 
