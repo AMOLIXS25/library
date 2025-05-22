@@ -8,6 +8,28 @@
     <link rel="icon" href="./assets/img/brain.png">
 </head>
 <body>
+    <dialog>
+        <button class="btn btn-full close-modal-button">X</button>
+        <form action="" method="post">
+            <div class="form-controls">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title">
+            </div>
+            <div class="form-controls">
+                <label for="author">Author</label>
+                <input type="text" id="author" name="author">
+            </div>
+            <div class="form-controls">
+                <label for="pages">Pages</label>
+                <input type="number" id="pages" name="pages">
+            </div>
+            <div class="form-controls">
+                <label for="">Have you read this book ?</label>
+                <input type="checkbox" id="read" name="read">
+            </div>
+            <button class="btn btn-full" type="submit">Validate</button>
+        </form>
+    </dialog>
     <header>
         <h1>BookNest</h1>
     </header>
@@ -25,45 +47,14 @@
                     Whether you're chasing adventure, wisdom, or a quiet moment of escape, your next chapter starts here."
 
                 </p>
-                <button class="btn btn-outline">Create new book</button>
+                <button class="btn btn-outline create-new-book-button">Create new book</button>
             </div>
             <div class="right-container">
                 <img src="./assets/img/brain.png" alt="picture brain flat design">
             </div>
         </section>
         <section class="books-list">
-            <div class="books-list-container">
-                <div class="book-card">
-                    <h3 class="book-title">Think and grow rich</h3>
-                    <p class="book-author">Napoleon Hill</p>
-                    <p class="book-pages">254 pages</p>
-                    <button class="btn btn-outline book-toggle-button-read">Not read</button>
-                </div>
-                <div class="book-card">
-                    <h3 class="book-title">How to win friends and influence people</h3>
-                    <p class="book-author">Dale carnegie</p>
-                    <p class="book-pages">350 pages</p>
-                    <button class="btn btn-outline book-toggle-button-read">Read</button>
-                </div>
-                <div class="book-card">
-                    <h3 class="book-title">How to win friends and influence people</h3>
-                    <p class="book-author">Dale carnegie</p>
-                    <p class="book-pages">350 pages</p>
-                    <button class="btn btn-outline book-toggle-button-read">Read</button>
-                </div>
-                <div class="book-card">
-                    <h3 class="book-title">How to win friends and influence people</h3>
-                    <p class="book-author">Dale carnegie</p>
-                    <p class="book-pages">350 pages</p>
-                    <button class="btn btn-outline book-toggle-button-read">Read</button>
-                </div>
-                <div class="book-card">
-                    <h3 class="book-title">How to win friends and influence people</h3>
-                    <p class="book-author">Dale carnegie</p>
-                    <p class="book-pages">350 pages</p>
-                    <button class="btn btn-outline book-toggle-button-read">Read</button>
-                </div>
-            </div>
+            <div class="books-list-container"></div>
         </div>
         </section>
     </main>
