@@ -1,75 +1,7 @@
-class Book {
-    #id;
-    #title;
-    #author;
-    #pages;
-    #read;
-    constructor (title, author, pages, read) {
-        this.#id = crypto.randomUUID();
-        this.#title = title;
-        this.#author = author;
-        this.#pages = pages;
-        this.#read = read;
-    }
-
-    get id() {
-        return this.#id;
-    }
-
-    get title() {
-        return this.#title;
-    }
-
-    get author() {
-        return this.#author;
-    }
-
-    get pages() {
-        return this.#pages;
-    }
-
-    get read() {
-        return this.#read;
-    }
-
-    toggleReadStatus() {
-        this.#read = !this.#read;
-    }
-}
+import { Book } from "./models/book.js";
 
 
-class BooksLibrary {
-    #library;
-    constructor(library) {
-        this.#library = library;
-    }
-
-    get library() {
-        return this.#library;
-    }
-
-    addBookToLibrary(bookToAdd) {
-        this.#library.push(bookToAdd);
-    } 
-
-    deleteBookToLibrary(bookId) {
-        this.#library = this.#library.filter((element) => {
-            return element.id !== bookId;
-        });
-    }
-
-    setToggleReadStatus(bookId) {
-        this.#library = this.#library.map((book) => {
-            if (book.id == bookId) {
-                book.toggleReadStatus();
-            }
-            return book;
-        });
-    }
-}
-
-
-class GraphicsEngine {
+export class GraphicsEngine {
     #booksLibrary;
     constructor(booksLibrary) {
         this.#booksLibrary = booksLibrary;
@@ -168,14 +100,3 @@ class GraphicsEngine {
     }
 
 }
-
-
-class Main {
-    static main() {
-        let booksLibrary = new BooksLibrary([]);
-        let graphicsEngine = new GraphicsEngine(booksLibrary);
-        graphicsEngine.initialize();
-    }
-}
-
-Main.main();
